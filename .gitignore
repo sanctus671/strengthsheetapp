@@ -4,3 +4,7 @@
 /src
 /.editorconfig
 /.sourcemaps/main.js.map
+/package.json
+/tsconfig.json
+/tslint.json
+/ionic.config.json
