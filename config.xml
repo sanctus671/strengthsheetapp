@@ -101,7 +101,6 @@
     <gap:plugin spec="https://github.com/sanctus671/cordova-plugin-splashscreen" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <plugin name="onesignal-cordova-plugin" spec="^2.3.3" />
     <gap:plugin spec="https://github.com/hypery2k/cordova-email-plugin#master" />
     <gap:plugin name="cordova-plugin-file" source="npm" version="^4.3.3" />
     <gap:plugin name="cordova-plugin-statusbar" source="npm" version="^2.3.0" />
