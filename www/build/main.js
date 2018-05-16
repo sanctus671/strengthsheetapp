@@ -126,7 +126,6 @@ var MessageProvider = (function () {
             _this.storage.get("token").then(function (token) {
                 if (token) {
                     _this.http.post(__WEBPACK_IMPORTED_MODULE_2__app_app_settings__["a" /* AppSettings */].apiUrl + '/conversationmessages?token=' + token, message).subscribe(function (res) {
-                        console.log(res);
                         resolve(res.conversation_message);
                     }, function (e) {
                         reject(e);
@@ -201,7 +200,7 @@ var ProfileModal = (function () {
     };
     ProfileModal = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'profile',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\profile\profile.html"*/'<ion-header class="profile-nav">\n    <ion-toolbar color="primary">\n        <ion-title>\n            Profile\n        </ion-title>\n        <ion-buttons start>\n\n\n            \n            <button ion-button (click)="dismiss()">\n                <span ion-text showWhen="ios">Cancel</span>\n                <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n            </button>\n        </ion-buttons>\n  \n    </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content>\n    \n    \n    <div class="profile-header">\n        \n        <div class="profile-dp">\n            <img [src]="profile.avatar ? profile.avatar : \'http://websites.localhost/strengthsheet/api/uploads/profile.jpg\'"/>\n        </div>\n        \n\n        <h2>{{profile.name}}</h2>\n        <p>{{profile.email}}</p>\n\n\n    </div>\n    \n    \n        <ion-list class="profile-content">\n            <ion-item>\n                <ion-icon name="person" item-start></ion-icon>\n                <h2>Display Name</h2>\n                <p>{{profile.name}}</p>\n            </ion-item>\n            <ion-item>\n                <ion-icon name="mail" item-start></ion-icon>\n                <h2>Email</h2>\n                <p>{{profile.email}}</p>\n            </ion-item> \n            <ion-item *ngIf="profile.phone">\n                <ion-icon name="call" item-start></ion-icon>\n                <h2>Phone</h2>\n                <p>{{profile.phone}}</p>\n            </ion-item>  \n            <ion-item *ngIf="profile.address">\n                <ion-icon name="pin" item-start></ion-icon>\n                <h2>Address</h2>\n                <p>{{profile.address}}</p>\n            </ion-item>  \n            <ion-item *ngIf="profile.gender">\n                <ion-icon name="body" item-start></ion-icon>\n                <h2>Gender</h2>\n                <p>{{profile.gender}}</p>\n            </ion-item>  \n            <ion-item *ngIf="profile.phone">\n                <ion-icon name="heart" item-start></ion-icon>\n                <h2>Date Of Birth</h2>\n                <p>{{formatDate(profile.dob)}}</p>\n            </ion-item>  \n            <ion-item *ngIf="profile.about">\n                <ion-icon name="help" item-start></ion-icon>\n                <h2>About</h2>\n                <p class="extended">{{profile.about}}</p>\n            </ion-item>            \n        </ion-list>        \n    \n        \n</ion-content>\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\profile\profile.html"*/
+            selector: 'profile',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\profile\profile.html"*/'<ion-header class="profile-nav">\n    <ion-toolbar color="primary">\n        <ion-title>\n            Profile\n        </ion-title>\n        <ion-buttons start>\n\n\n            \n            <button ion-button (click)="dismiss()">\n                <span ion-text showWhen="ios">Cancel</span>\n                <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n            </button>\n        </ion-buttons>\n  \n    </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content>\n    \n    \n    <div class="profile-header">\n        \n        <div class="profile-dp">\n            <img [src]="profile.avatar ? profile.avatar : \'https://api.strengthsheet.com/uploads/profile.jpg\'"/>\n        </div>\n        \n\n        <h2>{{profile.name}}</h2>\n        <p>{{profile.email}}</p>\n\n\n    </div>\n    \n    \n        <ion-list class="profile-content">\n            <ion-item>\n                <ion-icon name="person" item-start></ion-icon>\n                <h2>Display Name</h2>\n                <p>{{profile.name}}</p>\n            </ion-item>\n            <ion-item>\n                <ion-icon name="mail" item-start></ion-icon>\n                <h2>Email</h2>\n                <p>{{profile.email}}</p>\n            </ion-item> \n            <ion-item *ngIf="profile.phone">\n                <ion-icon name="call" item-start></ion-icon>\n                <h2>Phone</h2>\n                <p>{{profile.phone}}</p>\n            </ion-item>  \n            <ion-item *ngIf="profile.address">\n                <ion-icon name="pin" item-start></ion-icon>\n                <h2>Address</h2>\n                <p>{{profile.address}}</p>\n            </ion-item>  \n            <ion-item *ngIf="profile.gender">\n                <ion-icon name="body" item-start></ion-icon>\n                <h2>Gender</h2>\n                <p>{{profile.gender}}</p>\n            </ion-item>  \n            <ion-item *ngIf="profile.phone">\n                <ion-icon name="heart" item-start></ion-icon>\n                <h2>Date Of Birth</h2>\n                <p>{{formatDate(profile.dob)}}</p>\n            </ion-item>  \n            <ion-item *ngIf="profile.about">\n                <ion-icon name="help" item-start></ion-icon>\n                <h2>About</h2>\n                <p class="extended">{{profile.about}}</p>\n            </ion-item>            \n        </ion-list>        \n    \n        \n</ion-content>\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\profile\profile.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_transfer__["a" /* FileTransfer */], __WEBPACK_IMPORTED_MODULE_5__providers_request_request__["a" /* RequestProvider */]])
     ], ProfileModal);
@@ -254,8 +253,8 @@ webpackEmptyAsyncContext.id = 172;
 var AppSettings = (function () {
     function AppSettings() {
     }
-    AppSettings.apiUrl = 'http://websites.localhost/strengthsheet/api/public/api';
-    AppSettings.uploadUrl = 'http://websites.localhost/strengthsheet/api/uploads';
+    AppSettings.apiUrl = 'https://api.strengthsheet.com/public/api';
+    AppSettings.uploadUrl = 'https://api.strengthsheet.com/uploads';
     return AppSettings;
 }());
 
@@ -455,7 +454,6 @@ var EditDiaryExerciseModal = (function () {
         Object.assign(this.exercise, this.params.data.exercise);
         this.exercise.rpe = this.exercise.rpe ? this.exercise.rpe : 8;
         this.exercise.rpeScaled = parseFloat(this.exercise.rpe) * 10;
-        console.log(this.exercise);
     }
     EditDiaryExerciseModal.prototype.changeRpe = function (amount) {
         this.exercise.rpeScaled = this.exercise.rpeScaled + amount;
@@ -676,7 +674,7 @@ var NotificationsModal = (function () {
     };
     NotificationsModal = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'notifications',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\notifications\notifications.html"*/'<ion-header>\n    <ion-toolbar color="primary">\n        <ion-title>\n            Notifications\n        </ion-title>\n        <ion-buttons start>\n\n\n            \n            <button ion-button (click)="dismiss()">\n                <span ion-text showWhen="ios">Cancel</span>\n                <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n            </button>\n        </ion-buttons>\n  \n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n\n    <div class="diary-loading" *ngIf="properties.loading">\n        <ion-spinner></ion-spinner>\n    </div>\n    \n    <div class="diary-empty empty-state" *ngIf="!properties.loading && notifications.data.length < 1">\n        <ion-icon name=\'notifications\'></ion-icon>\n        No Notifications\n    </div>    \n    \n    \n    <ion-list class="friends-list">           \n        <ion-item *ngFor="let notification of notifications.data; let i = index" (click)="openNotification(notification)" [ngClass]="{\'not-seen\' : !notification.seen}">\n            <ion-avatar item-start>\n                <img [src]="notification.avatar">\n            </ion-avatar>            \n            <h2>\n                <span *ngIf="notification.notification_type === \'diary\'">Diary Updated</span>\n                <span *ngIf="notification.notification_type === \'message\'">Message Received</span>\n                <span *ngIf="notification.notification_type === \'request\'">Coach Request</span>\n                <span *ngIf="notification.notification_type === \'event\'">Event Reminder</span>\n                <span *ngIf="notification.notification_type === \'request_accepted\'">Request Accepted</span>\n                <ion-note>{{formatDate(notification.created_at)}}</ion-note>\n            </h2>\n            <p>\n                <span *ngIf="notification.notification_type === \'diary\'">{{notification.name}} has updated your diary</span>\n                <span *ngIf="notification.notification_type === \'message\'">{{notification.name}} sent you a message</span>\n                <span *ngIf="notification.notification_type === \'request\'">{{notification.name}} wants to be your coach</span>\n                <span *ngIf="notification.notification_type === \'event\'">An event is approaching soon!</span>\n                <span *ngIf="notification.notification_type === \'request_accepted\'">{{notification.name}} accepted your coach request</span>\n            </p>\n        </ion-item>  \n    </ion-list>\n\n\n    <ion-infinite-scroll (ionInfinite)="getMoreNotifications($event)">\n        <ion-infinite-scroll-content></ion-infinite-scroll-content>\n    </ion-infinite-scroll>   \n\n</ion-content>\n\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\notifications\notifications.html"*/
+            selector: 'notifications',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\notifications\notifications.html"*/'<ion-header>\n    <ion-toolbar color="primary">\n        <ion-title>\n            Notifications\n        </ion-title>\n        <ion-buttons start>\n\n\n            \n            <button ion-button (click)="dismiss()">\n                <span ion-text showWhen="ios">Cancel</span>\n                <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n            </button>\n        </ion-buttons>\n  \n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n\n    <div class="diary-loading" *ngIf="properties.loading">\n        <ion-spinner></ion-spinner>\n    </div>\n    \n    <div class="diary-empty empty-state" *ngIf="!properties.loading && notifications.data.length < 1">\n        <ion-icon name=\'notifications\'></ion-icon>\n        No Notifications\n    </div>    \n    \n    \n    <ion-list class="friends-list">           \n        <ion-item *ngFor="let notification of notifications.data; let i = index" (click)="openNotification(notification)" [ngClass]="{\'not-seen\' : !notification.seen}">\n            <ion-avatar item-start>\n                <img [src]="notification.avatar ? notification.avatar : \'https://api.strengthsheet.com/uploads/profile.jpg\'">\n            </ion-avatar>            \n            <h2>\n                <span *ngIf="notification.notification_type === \'diary\'">Diary Updated</span>\n                <span *ngIf="notification.notification_type === \'message\'">Message Received</span>\n                <span *ngIf="notification.notification_type === \'request\'">Coach Request</span>\n                <span *ngIf="notification.notification_type === \'event\'">Event Reminder</span>\n                <span *ngIf="notification.notification_type === \'request_accepted\'">Request Accepted</span>\n                <ion-note>{{formatDate(notification.created_at)}}</ion-note>\n            </h2>\n            <p>\n                <span *ngIf="notification.notification_type === \'diary\'">{{notification.name}} has updated your diary</span>\n                <span *ngIf="notification.notification_type === \'message\'">{{notification.name}} sent you a message</span>\n                <span *ngIf="notification.notification_type === \'request\'">{{notification.name}} wants to be your coach</span>\n                <span *ngIf="notification.notification_type === \'event\'">An event is approaching soon!</span>\n                <span *ngIf="notification.notification_type === \'request_accepted\'">{{notification.name}} accepted your coach request</span>\n            </p>\n        </ion-item>  \n    </ion-list>\n\n\n    <ion-infinite-scroll (ionInfinite)="getMoreNotifications($event)">\n        <ion-infinite-scroll-content></ion-infinite-scroll-content>\n    </ion-infinite-scroll>   \n\n</ion-content>\n\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\notifications\notifications.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_transfer__["a" /* FileTransfer */], __WEBPACK_IMPORTED_MODULE_5__providers_notification_notification__["a" /* NotificationProvider */]])
     ], NotificationsModal);
@@ -963,7 +961,6 @@ var MessagesPage = (function () {
         this.properties.loading = true;
         this.messageProvider.getConversations(this.properties).then(function (data) {
             _this.properties.loading = false;
-            console.log(data);
             _this.conversations = data;
         }).catch(function () {
             _this.properties.loading = false;
@@ -981,7 +978,7 @@ var MessagesPage = (function () {
     };
     MessagesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-messages',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\messages\messages.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Messages</ion-title>\n    \n        <ion-buttons end>\n            <button ion-button icon-only tappable (click)="openRequests()">\n                <ion-icon name="person-add" ></ion-icon>\n                <ion-badge color="danger" *ngIf="requestCount > 0">{{requestCount}}</ion-badge>\n            </button>\n        </ion-buttons>    \n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    \n    <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content></ion-refresher-content>\n    </ion-refresher>     \n    \n    <div class="diary-loading" *ngIf="properties.loading">\n        <ion-spinner></ion-spinner>\n    </div>\n    \n    <div class="diary-empty empty-state" *ngIf="!properties.loading && conversations.data.length < 1">\n        <ion-icon name=\'chatbubbles\'></ion-icon>\n        No Messages\n    </div>\n\n    \n    <ion-list class="messages-list" *ngIf="!properties.loading">\n        <ion-item *ngFor="let conversation of conversations.data" (click)="goToConversation(conversation)" [ngClass]="{\'requires-reply\':conversation.latest_message.user_id !== user.id}">\n            <ion-avatar item-start>\n                <img [src]="conversation.participants[0].profile.avatar ? conversation.participants[0].profile.avatar : \'http://websites.localhost/strengthsheet/api/uploads/profile.jpg\'">\n              </ion-avatar>\n            <ion-label>\n\n                <h2>\n                    <span *ngFor="let participant of conversation.participants; let i = index">\n                        <span *ngIf="i !== 0">, </span>\n                        {{participant.profile.name}}\n                    </span>\n                </h2>\n                <p *ngIf="conversation.latest_message.message">{{conversation.latest_message.message}}</p>\n                <p *ngIf="conversation.latest_message.file">File Received</p>\n            </ion-label>\n\n            <ion-note item-end>{{formatDate(conversation.latest_message.created_at)}}</ion-note>\n\n        </ion-item>\n    </ion-list>\n    \n    \n</ion-content>\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\messages\messages.html"*/
+            selector: 'page-messages',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\messages\messages.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Messages</ion-title>\n    \n        <ion-buttons end>\n            <button ion-button icon-only tappable (click)="openRequests()">\n                <ion-icon name="person-add" ></ion-icon>\n                <ion-badge color="danger" *ngIf="requestCount > 0">{{requestCount}}</ion-badge>\n            </button>\n        </ion-buttons>    \n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    \n    <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content></ion-refresher-content>\n    </ion-refresher>     \n    \n    <div class="diary-loading" *ngIf="properties.loading">\n        <ion-spinner></ion-spinner>\n    </div>\n    \n    <div class="diary-empty empty-state" *ngIf="!properties.loading && conversations.data.length < 1">\n        <ion-icon name=\'chatbubbles\'></ion-icon>\n        No Messages\n    </div>\n\n    \n    <ion-list class="messages-list" *ngIf="!properties.loading">\n        <ion-item *ngFor="let conversation of conversations.data" (click)="goToConversation(conversation)" [ngClass]="{\'requires-reply\':conversation.latest_message && conversation.latest_message.user_id !== user.id}">\n            <ion-avatar item-start>\n                <img [src]="conversation.participants[0].profile.avatar ? conversation.participants[0].profile.avatar : \'https://api.strengthsheet.com/uploads/profile.jpg\'">\n              </ion-avatar>\n            <ion-label>\n\n                <h2>\n                    <span *ngFor="let participant of conversation.participants; let i = index">\n                        <span *ngIf="i !== 0">, </span>\n                        {{participant.profile.name}}\n                    </span>\n                </h2>\n                <p *ngIf="conversation.latest_message && conversation.latest_message.message">{{conversation.latest_message.message}}</p>\n                <p *ngIf="conversation.latest_message && conversation.latest_message.file">File Received</p>\n            </ion-label>\n\n            <ion-note item-end>{{conversation.latest_message ? formatDate(conversation.latest_message.created_at) : ""}}</ion-note>\n\n        </ion-item>\n    </ion-list>\n    \n    \n</ion-content>\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\messages\messages.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_4__providers_message_message__["a" /* MessageProvider */]])
     ], MessagesPage);
@@ -1049,7 +1046,6 @@ var SettingsPage = (function () {
             if (user) {
                 _this.user = user;
                 _this.authenticationProvider.getProfile(_this.user.id).then(function (data) {
-                    console.log(data);
                     _this.client = data;
                 });
             }
@@ -1095,7 +1091,6 @@ var SettingsPage = (function () {
     };
     SettingsPage.prototype.openEditProfile = function () {
         var _this = this;
-        console.log(this.user);
         var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_7__modals_edit_profile_edit_profile__["a" /* EditProfileModal */], { profile: this.client });
         modal.onDidDismiss(function (profile) {
             if (profile) {
@@ -1107,7 +1102,6 @@ var SettingsPage = (function () {
     };
     SettingsPage.prototype.removeCoach = function (coach, index, ev) {
         var _this = this;
-        console.log(coach);
         ev.stopPropagation();
         var alert = this.alertCtrl.create({
             title: "Confirm",
@@ -1226,7 +1220,7 @@ var SettingsPage = (function () {
     };
     SettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-settings',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\settings\settings.html"*/'<!--\n  Generated template for the SettingsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="primary">\n  \n        \n        <ion-title>Settings</ion-title>\n    \n    </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n<ion-list class="settings-list">\n    \n    \n    <ion-list-header>\n        <h2>Support</h2>\n    </ion-list-header>  \n    \n <ion-item>\n    <ion-icon name="heart" item-start></ion-icon>\n    Rate The App\n    <button ion-button outline item-end (click)="openRate()">Rate</button>\n  </ion-item>    \n    \n    \n <ion-item>\n    <ion-icon name="logo-facebook" item-start></ion-icon>\n    Follow Us\n    <button ion-button outline item-end (click)="openFollow()">Follow</button>\n  </ion-item>   \n    \n    \n <ion-item>\n    <ion-icon name="mail" item-start></ion-icon>\n    Contact Support\n    <button ion-button outline item-end (click)="openEmail()">Email</button>\n  </ion-item>  \n    \n    <ion-list-header *ngIf="coaches.data.length > 0">\n        <h2>Active Coaches</h2>\n    </ion-list-header> \n\n    <ion-list *ngIf="coaches.data.length > 0">           \n        <ion-item *ngFor="let coach of coaches.data" (click)="viewProfile(coach)">\n            <ion-avatar item-start>\n                <img [src]="coach.avatar ? coach.avatar : \'http://websites.localhost/strengthsheet/api/uploads/profile.jpg\'">\n            </ion-avatar>\n            <h2>{{coach.name}}</h2>\n            <button ion-button clear item-end (click)="removeCoach(coach,i, $event)" color="danger">Remove</button>\n        </ion-item>  \n    </ion-list>    \n    \n    \n    <ion-list-header>\n        <h2>Account Settings</h2>\n    </ion-list-header>      \n    \n    <button ion-item detail-none (click)="openEditProfile()">\n            <ion-icon name="unlock" item-start></ion-icon>\n        Edit Profile\n        <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" item-end></ion-icon>\n    </button>  \n\n    <button ion-item detail-none (click)="openChangePassword()">\n            <ion-icon name="unlock" item-start></ion-icon>\n        Change Password\n        <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" item-end></ion-icon>\n    </button>  \n  \n\n\n    <button ion-item detail-none (click)="logout()">\n            <ion-icon name="lock" item-start></ion-icon>\n        Logout\n    </button> \n\n     \n</ion-list>    \n \n</ion-content>'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\settings\settings.html"*/,
+            selector: 'page-settings',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\settings\settings.html"*/'<!--\n  Generated template for the SettingsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="primary">\n  \n        \n        <ion-title>Settings</ion-title>\n    \n    </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n<ion-list class="settings-list">\n    \n    \n    <ion-list-header>\n        <h2>Support</h2>\n    </ion-list-header>  \n    \n <ion-item>\n    <ion-icon name="heart" item-start></ion-icon>\n    Rate The App\n    <button ion-button outline item-end (click)="openRate()">Rate</button>\n  </ion-item>    \n    \n    \n <ion-item>\n    <ion-icon name="logo-facebook" item-start></ion-icon>\n    Follow Us\n    <button ion-button outline item-end (click)="openFollow()">Follow</button>\n  </ion-item>   \n    \n    \n <ion-item>\n    <ion-icon name="mail" item-start></ion-icon>\n    Contact Support\n    <button ion-button outline item-end (click)="openEmail()">Email</button>\n  </ion-item>  \n    \n    <ion-list-header *ngIf="coaches.data.length > 0">\n        <h2>Active Coaches</h2>\n    </ion-list-header> \n\n    <ion-list *ngIf="coaches.data.length > 0">           \n        <ion-item *ngFor="let coach of coaches.data" (click)="viewProfile(coach)">\n            <ion-avatar item-start>\n                <img [src]="coach.avatar ? coach.avatar : \'https://api.strengthsheet.com/uploads/profile.jpg\'">\n            </ion-avatar>\n            <h2>{{coach.name}}</h2>\n            <button ion-button clear item-end (click)="removeCoach(coach,i, $event)" color="danger">Remove</button>\n        </ion-item>  \n    </ion-list>    \n    \n    \n    <ion-list-header>\n        <h2>Account Settings</h2>\n    </ion-list-header>      \n    \n    <button ion-item detail-none (click)="openEditProfile()">\n            <ion-icon name="unlock" item-start></ion-icon>\n        Edit Profile\n        <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" item-end></ion-icon>\n    </button>  \n\n    <button ion-item detail-none (click)="openChangePassword()">\n            <ion-icon name="unlock" item-start></ion-icon>\n        Change Password\n        <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" item-end></ion-icon>\n    </button>  \n  \n\n\n    <button ion-item detail-none (click)="logout()">\n            <ion-icon name="lock" item-start></ion-icon>\n        Logout\n    </button> \n\n     \n</ion-list>    \n \n</ion-content>'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\settings\settings.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_email_composer__["a" /* EmailComposer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_3__providers_authentication_authentication__["a" /* AuthenticationProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_3__providers_authentication_authentication__["a" /* AuthenticationProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_request_request__["a" /* RequestProvider */]])
     ], SettingsPage);
@@ -1286,7 +1280,6 @@ var EditProfileModal = (function () {
         this.profile = {};
         Object.assign(this.profile, this.params.data.profile);
         this.profile.dob = this.profile.dob ? __WEBPACK_IMPORTED_MODULE_8_moment__(this.profile.dob).toISOString() : null;
-        console.log(this.profile);
     }
     EditProfileModal.prototype.update = function () {
         this.viewCtrl.dismiss(this.profile);
@@ -1354,7 +1347,7 @@ var EditProfileModal = (function () {
     };
     EditProfileModal = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'edit-profile',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\edit-profile\edit-profile.html"*/'<ion-header>\n    <ion-toolbar  color="primary">\n        <ion-title>\n            Edit Profile\n        </ion-title>\n        <ion-buttons start>\n\n\n            \n            <button ion-button (click)="dismiss()">\n                <span ion-text showWhen="ios">Cancel</span>\n                <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n            </button>\n        </ion-buttons>\n  \n    </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content>\n    \n    <ion-list>      \n\n        \n        <ion-item>\n            <ion-avatar item-start>\n                <img [src]="profile.avatar ? profile.avatar : \'http://websites.localhost/strengthsheet/api/uploads/profile.jpg\'">\n            </ion-avatar>\n            <button ion-button color="primary">Change Photo</button>\n        </ion-item>\n        \n        <ion-item>\n            <ion-label floating>Name</ion-label>\n            <ion-input type="text" [(ngModel)]="profile.name"></ion-input>\n        </ion-item>    \n              \n        \n        <ion-item>\n            <ion-label floating>Email</ion-label>\n            <ion-input type="email" [(ngModel)]="profile.email"></ion-input>\n        </ion-item>   \n\n        <ion-item>\n            <ion-label floating>Phone</ion-label>\n            <ion-input type="tel" [(ngModel)]="profile.phone"></ion-input>\n        </ion-item> \n        \n        <ion-item>\n            <ion-label floating>Address</ion-label>\n            <ion-input type="text" [(ngModel)]="profile.address" (ionFocus)="openFindAddress()"></ion-input>\n        </ion-item>        \n        \n        <ion-item>\n          <ion-label floating>Gender</ion-label>\n          <ion-select [(ngModel)]="profile.gender">\n            <ion-option value="Male">Male</ion-option>\n            <ion-option value="Female">Female</ion-option>\n            <ion-option value="Other">Other</ion-option>\n          </ion-select>\n        </ion-item>        \n        \n        <ion-item>\n            <ion-label floating>Date Of Birth</ion-label>\n            <ion-datetime displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="profile.dob"></ion-datetime>\n        </ion-item>  \n \n\n        <ion-item>\n            <ion-label floating>Biography/About You</ion-label>\n            <ion-textarea [(ngModel)]="profile.about" autosize></ion-textarea>\n        </ion-item>\n\n        \n        \n    </ion-list>  \n        \n        \n</ion-content>\n\n\n\n<ion-footer>\n    <button ion-button full color="primary" (click)="update()">Update Profile</button>\n\n</ion-footer>'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\edit-profile\edit-profile.html"*/
+            selector: 'edit-profile',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\edit-profile\edit-profile.html"*/'<ion-header>\n    <ion-toolbar  color="primary">\n        <ion-title>\n            Edit Profile\n        </ion-title>\n        <ion-buttons start>\n\n\n            \n            <button ion-button (click)="dismiss()">\n                <span ion-text showWhen="ios">Cancel</span>\n                <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n            </button>\n        </ion-buttons>\n  \n    </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content>\n    \n    <ion-list>      \n\n        \n        <ion-item>\n            <ion-avatar item-start>\n                <img [src]="profile.avatar ? profile.avatar : \'https://api.strengthsheet.com/uploads/profile.jpg\'">\n            </ion-avatar>\n            <button ion-button color="primary">Change Photo</button>\n        </ion-item>\n        \n        <ion-item>\n            <ion-label floating>Name</ion-label>\n            <ion-input type="text" [(ngModel)]="profile.name"></ion-input>\n        </ion-item>    \n              \n        \n        <ion-item>\n            <ion-label floating>Email</ion-label>\n            <ion-input type="email" [(ngModel)]="profile.email"></ion-input>\n        </ion-item>   \n\n        <ion-item>\n            <ion-label floating>Phone</ion-label>\n            <ion-input type="tel" [(ngModel)]="profile.phone"></ion-input>\n        </ion-item> \n        \n        <ion-item>\n            <ion-label floating>Address</ion-label>\n            <ion-input type="text" [(ngModel)]="profile.address" (ionFocus)="openFindAddress()"></ion-input>\n        </ion-item>        \n        \n        <ion-item>\n          <ion-label floating>Gender</ion-label>\n          <ion-select [(ngModel)]="profile.gender">\n            <ion-option value="Male">Male</ion-option>\n            <ion-option value="Female">Female</ion-option>\n            <ion-option value="Other">Other</ion-option>\n          </ion-select>\n        </ion-item>        \n        \n        <ion-item>\n            <ion-label floating>Date Of Birth</ion-label>\n            <ion-datetime displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="profile.dob"></ion-datetime>\n        </ion-item>  \n \n\n        <ion-item>\n            <ion-label floating>Biography/About You</ion-label>\n            <ion-textarea [(ngModel)]="profile.about" autosize></ion-textarea>\n        </ion-item>\n\n        \n        \n    </ion-list>  \n        \n        \n</ion-content>\n\n\n\n<ion-footer>\n    <button ion-button full color="primary" (click)="update()">Update Profile</button>\n\n</ion-footer>'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\edit-profile\edit-profile.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_transfer__["a" /* FileTransfer */], __WEBPACK_IMPORTED_MODULE_7__providers_authentication_authentication__["a" /* AuthenticationProvider */]])
     ], EditProfileModal);
@@ -1394,7 +1387,6 @@ var FindAddressModal = (function () {
         this.viewCtrl.dismiss();
     };
     FindAddressModal.prototype.detail = function (address) {
-        console.log(address);
         this.viewCtrl.dismiss(address[0]);
     };
     FindAddressModal = __decorate([
@@ -1437,45 +1429,43 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_signup_signup__ = __webpack_require__(349);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_diary_diary__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_diary_exercise_diary_exercise__ = __webpack_require__(445);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_messages_messages__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_message_message__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_settings_settings__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__modals_add_exercise_add_exercise__ = __webpack_require__(343);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__modals_edit_profile_edit_profile__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__modals_edit_diary_exercise_edit_diary_exercise__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__modals_notifications_notifications__ = __webpack_require__(348);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__modals_requests_requests__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__modals_profile_profile__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__modals_find_address_find_address__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ion_datepicker__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_autosize_autosize__ = __webpack_require__(446);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ionic2_google_places_autocomplete__ = __webpack_require__(447);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_diary_diary__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_authentication_authentication__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_exercise_exercise__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_message_message__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_request_request__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_notification_notification__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_native_status_bar__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_native_splash_screen__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ionic_storage__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ionic_native_onesignal__ = __webpack_require__(356);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_email_composer__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__ionic_native_camera__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__ionic_native_file_transfer__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__ionic_native_file__ = __webpack_require__(347);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__ionic_native_in_app_browser__ = __webpack_require__(346);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pipes_exercise_search__ = __webpack_require__(450);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__pipes_sort__ = __webpack_require__(451);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_messages_messages__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_message_message__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_settings_settings__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__modals_add_exercise_add_exercise__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__modals_edit_profile_edit_profile__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__modals_edit_diary_exercise_edit_diary_exercise__ = __webpack_require__(345);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__modals_notifications_notifications__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__modals_requests_requests__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__modals_profile_profile__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__modals_find_address_find_address__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ion_datepicker__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_autosize_autosize__ = __webpack_require__(445);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ionic2_google_places_autocomplete__ = __webpack_require__(446);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_diary_diary__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_authentication_authentication__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_exercise_exercise__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_message_message__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_request_request__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_notification_notification__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__ionic_native_status_bar__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_native_splash_screen__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_storage__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ionic_native_onesignal__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ionic_native_email_composer__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_camera__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__ionic_native_file_transfer__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__ionic_native_file__ = __webpack_require__(347);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__ionic_native_in_app_browser__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pipes_exercise_search__ = __webpack_require__(449);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pipes_sort__ = __webpack_require__(450);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -1525,31 +1515,30 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* LoginPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_signup_signup__["a" /* SignupPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_diary_diary__["a" /* DiaryPage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_diary_exercise_diary_exercise__["a" /* DiaryExercisePage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_messages_messages__["a" /* MessagesPage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_message_message__["a" /* MessagePage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_settings_settings__["a" /* SettingsPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_13__modals_add_exercise_add_exercise__["a" /* AddExerciseModal */],
-                __WEBPACK_IMPORTED_MODULE_14__modals_edit_profile_edit_profile__["a" /* EditProfileModal */],
-                __WEBPACK_IMPORTED_MODULE_16__modals_notifications_notifications__["a" /* NotificationsModal */],
-                __WEBPACK_IMPORTED_MODULE_17__modals_requests_requests__["a" /* RequestsModal */],
-                __WEBPACK_IMPORTED_MODULE_15__modals_edit_diary_exercise_edit_diary_exercise__["a" /* EditDiaryExerciseModal */],
-                __WEBPACK_IMPORTED_MODULE_19__modals_find_address_find_address__["a" /* FindAddressModal */],
-                __WEBPACK_IMPORTED_MODULE_18__modals_profile_profile__["a" /* ProfileModal */],
-                __WEBPACK_IMPORTED_MODULE_38__pipes_exercise_search__["a" /* ExerciseSearchPipe */],
-                __WEBPACK_IMPORTED_MODULE_39__pipes_sort__["a" /* ArraySortPipe */],
-                __WEBPACK_IMPORTED_MODULE_21__components_autosize_autosize__["a" /* Autosize */]
+                __WEBPACK_IMPORTED_MODULE_8__pages_messages_messages__["a" /* MessagesPage */],
+                __WEBPACK_IMPORTED_MODULE_9__pages_message_message__["a" /* MessagePage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_settings_settings__["a" /* SettingsPage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_12__modals_add_exercise_add_exercise__["a" /* AddExerciseModal */],
+                __WEBPACK_IMPORTED_MODULE_13__modals_edit_profile_edit_profile__["a" /* EditProfileModal */],
+                __WEBPACK_IMPORTED_MODULE_15__modals_notifications_notifications__["a" /* NotificationsModal */],
+                __WEBPACK_IMPORTED_MODULE_16__modals_requests_requests__["a" /* RequestsModal */],
+                __WEBPACK_IMPORTED_MODULE_14__modals_edit_diary_exercise_edit_diary_exercise__["a" /* EditDiaryExerciseModal */],
+                __WEBPACK_IMPORTED_MODULE_18__modals_find_address_find_address__["a" /* FindAddressModal */],
+                __WEBPACK_IMPORTED_MODULE_17__modals_profile_profile__["a" /* ProfileModal */],
+                __WEBPACK_IMPORTED_MODULE_37__pipes_exercise_search__["a" /* ExerciseSearchPipe */],
+                __WEBPACK_IMPORTED_MODULE_38__pipes_sort__["a" /* ArraySortPipe */],
+                __WEBPACK_IMPORTED_MODULE_20__components_autosize_autosize__["a" /* Autosize */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: []
                 }),
-                __WEBPACK_IMPORTED_MODULE_20_ion_datepicker__["b" /* DatePickerModule */],
-                __WEBPACK_IMPORTED_MODULE_31__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_19_ion_datepicker__["b" /* DatePickerModule */],
+                __WEBPACK_IMPORTED_MODULE_30__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_22_ionic2_google_places_autocomplete__["a" /* GooglePlacesAutocompleteComponentModule */]
+                __WEBPACK_IMPORTED_MODULE_21_ionic2_google_places_autocomplete__["a" /* GooglePlacesAutocompleteComponentModule */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicApp */]],
             entryComponents: [
@@ -1557,35 +1546,34 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* LoginPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_signup_signup__["a" /* SignupPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_diary_diary__["a" /* DiaryPage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_diary_exercise_diary_exercise__["a" /* DiaryExercisePage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_messages_messages__["a" /* MessagesPage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_message_message__["a" /* MessagePage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_settings_settings__["a" /* SettingsPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_13__modals_add_exercise_add_exercise__["a" /* AddExerciseModal */],
-                __WEBPACK_IMPORTED_MODULE_14__modals_edit_profile_edit_profile__["a" /* EditProfileModal */],
-                __WEBPACK_IMPORTED_MODULE_15__modals_edit_diary_exercise_edit_diary_exercise__["a" /* EditDiaryExerciseModal */],
-                __WEBPACK_IMPORTED_MODULE_16__modals_notifications_notifications__["a" /* NotificationsModal */],
-                __WEBPACK_IMPORTED_MODULE_17__modals_requests_requests__["a" /* RequestsModal */],
-                __WEBPACK_IMPORTED_MODULE_19__modals_find_address_find_address__["a" /* FindAddressModal */],
-                __WEBPACK_IMPORTED_MODULE_18__modals_profile_profile__["a" /* ProfileModal */]
+                __WEBPACK_IMPORTED_MODULE_8__pages_messages_messages__["a" /* MessagesPage */],
+                __WEBPACK_IMPORTED_MODULE_9__pages_message_message__["a" /* MessagePage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_settings_settings__["a" /* SettingsPage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_12__modals_add_exercise_add_exercise__["a" /* AddExerciseModal */],
+                __WEBPACK_IMPORTED_MODULE_13__modals_edit_profile_edit_profile__["a" /* EditProfileModal */],
+                __WEBPACK_IMPORTED_MODULE_14__modals_edit_diary_exercise_edit_diary_exercise__["a" /* EditDiaryExerciseModal */],
+                __WEBPACK_IMPORTED_MODULE_15__modals_notifications_notifications__["a" /* NotificationsModal */],
+                __WEBPACK_IMPORTED_MODULE_16__modals_requests_requests__["a" /* RequestsModal */],
+                __WEBPACK_IMPORTED_MODULE_18__modals_find_address_find_address__["a" /* FindAddressModal */],
+                __WEBPACK_IMPORTED_MODULE_17__modals_profile_profile__["a" /* ProfileModal */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_29__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_30__ionic_native_splash_screen__["a" /* SplashScreen */],
-                __WEBPACK_IMPORTED_MODULE_32__ionic_native_onesignal__["a" /* OneSignal */],
-                __WEBPACK_IMPORTED_MODULE_33__ionic_native_email_composer__["a" /* EmailComposer */],
+                __WEBPACK_IMPORTED_MODULE_28__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_29__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_31__ionic_native_onesignal__["a" /* OneSignal */],
+                __WEBPACK_IMPORTED_MODULE_32__ionic_native_email_composer__["a" /* EmailComposer */],
                 { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_23__providers_diary_diary__["a" /* DiaryProvider */],
-                __WEBPACK_IMPORTED_MODULE_24__providers_authentication_authentication__["a" /* AuthenticationProvider */],
-                __WEBPACK_IMPORTED_MODULE_25__providers_exercise_exercise__["a" /* ExerciseProvider */],
-                __WEBPACK_IMPORTED_MODULE_26__providers_message_message__["a" /* MessageProvider */],
-                __WEBPACK_IMPORTED_MODULE_27__providers_request_request__["a" /* RequestProvider */],
-                __WEBPACK_IMPORTED_MODULE_28__providers_notification_notification__["a" /* NotificationProvider */],
-                __WEBPACK_IMPORTED_MODULE_35__ionic_native_file_transfer__["a" /* FileTransfer */],
-                __WEBPACK_IMPORTED_MODULE_36__ionic_native_file__["a" /* File */],
-                __WEBPACK_IMPORTED_MODULE_34__ionic_native_camera__["a" /* Camera */],
-                __WEBPACK_IMPORTED_MODULE_37__ionic_native_in_app_browser__["a" /* InAppBrowser */]
+                __WEBPACK_IMPORTED_MODULE_22__providers_diary_diary__["a" /* DiaryProvider */],
+                __WEBPACK_IMPORTED_MODULE_23__providers_authentication_authentication__["a" /* AuthenticationProvider */],
+                __WEBPACK_IMPORTED_MODULE_24__providers_exercise_exercise__["a" /* ExerciseProvider */],
+                __WEBPACK_IMPORTED_MODULE_25__providers_message_message__["a" /* MessageProvider */],
+                __WEBPACK_IMPORTED_MODULE_26__providers_request_request__["a" /* RequestProvider */],
+                __WEBPACK_IMPORTED_MODULE_27__providers_notification_notification__["a" /* NotificationProvider */],
+                __WEBPACK_IMPORTED_MODULE_34__ionic_native_file_transfer__["a" /* FileTransfer */],
+                __WEBPACK_IMPORTED_MODULE_35__ionic_native_file__["a" /* File */],
+                __WEBPACK_IMPORTED_MODULE_33__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_36__ionic_native_in_app_browser__["a" /* InAppBrowser */]
             ]
         })
     ], AppModule);
@@ -1646,7 +1634,7 @@ var LoginPage = (function () {
                 _this.user.loading = false;
             });
         }).catch(function (e) {
-            console.log(e);
+            //console.log(e);
             _this.user.loading = false;
             if (e && e.status === 401) {
                 _this.user.error = "Invalid credentials";
@@ -1667,7 +1655,7 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\login\login.html"*/'<ion-content>\n    \n    <div class="login-top-section">\n\n        <img class="logo" src="assets/imgs/icon-light.png" />\n\n    </div>\n\n\n\n    \n    \n    <ion-list class="login-form" ion-card>\n        <ion-card class="login-form-card">\n            <ion-card-content>\n                <ion-item>\n                    <ion-label floating>Email</ion-label>\n                    <ion-input type="text" [(ngModel)]="user.email"></ion-input>\n                </ion-item>\n\n                <ion-item>\n                    <ion-label floating>Password</ion-label>\n                    <ion-input type="password" [(ngModel)]="user.password"></ion-input>\n                </ion-item>\n            </ion-card-content>\n        </ion-card>\n        \n        <button ion-button full color=\'primary\' class="login-button" (click)="login()" [disabled]="user.loading">\n            Log In\n            <ion-spinner *ngIf="user.loading"></ion-spinner>\n        </button>\n        \n        <p class="login-error" *ngIf="user.error">{{user.error}}</p>\n         \n        <p>Don\'t have an account? <a (click)="signup()">Sign up</a></p>\n   \n        \n        \n    </ion-list>\n    \n\n</ion-content>\n\n\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\login\login.html"*/'<ion-content>\n    \n    <div class="login-top-section">\n\n        <img class="logo" src="assets/imgs/icon-light.png" />\n\n    </div>\n\n\n\n    \n    <form (ngSubmit)="login()">\n    <ion-list class="login-form" ion-card>\n        <ion-card class="login-form-card">\n            <ion-card-content>\n                <ion-item>\n                    <ion-label floating>Email</ion-label>\n                    <ion-input type="text" [(ngModel)]="user.email" name="email"></ion-input>\n                </ion-item>\n\n                <ion-item>\n                    <ion-label floating>Password</ion-label>\n                    <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>\n                </ion-item>\n            </ion-card-content>\n        </ion-card>\n        \n        <button ion-button full color=\'primary\' class="login-button" type="submit" [disabled]="user.loading">\n            Log In\n            <ion-spinner *ngIf="user.loading"></ion-spinner>\n        </button>\n        \n        <p class="login-error" *ngIf="user.error">{{user.error}}</p>\n         \n        <p>Don\'t have an account? <a (click)="signup()">Sign up</a></p>\n   \n        \n        \n    </ion-list>\n    </form>\n    \n\n</ion-content>\n\n\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_authentication_authentication__["a" /* AuthenticationProvider */]])
     ], LoginPage);
@@ -1720,16 +1708,14 @@ var AuthenticationProvider = (function () {
     }
     AuthenticationProvider.prototype.login = function (data) {
         var _this = this;
-        console.log(data);
         return new Promise(function (resolve, reject) {
             _this.http.post(__WEBPACK_IMPORTED_MODULE_2__app_app_settings__["a" /* AppSettings */].apiUrl + "/auth/login", data).subscribe(function (res) {
-                console.log(res);
                 _this.storage.set("token", res["token"]).then(function () {
                     _this.events.publish("user:loggedin");
                 });
                 resolve(res["token"]);
             }, function (e) {
-                console.log(e);
+                //console.log(e);
                 reject(e);
             });
         });
@@ -1757,7 +1743,7 @@ var AuthenticationProvider = (function () {
                         _this.events.publish("user:retreived", res["user"]);
                         resolve(res["user"]);
                     }, function (e) {
-                        console.log(e);
+                        //console.log(e);
                         if (e && e.error && e.error.error && e.error.error.status_code === 401) {
                             //token expired, logout
                             _this.storage.clear();
@@ -1927,7 +1913,6 @@ var MyApp = (function () {
         this.initializeApp();
         this.user = { profile: {} };
         this.storage.get("user").then(function (user) {
-            console.log(user);
             if (user) {
                 _this.user = user;
                 _this.savePushId();
@@ -2005,7 +1990,6 @@ var MyApp = (function () {
                         _this.notificationProvider.updateNotification({ seen: true, id: pushData.notification_id }).then(function () {
                             _this.events.publish("notification:viewed");
                         });
-                        console.log(pushData);
                     }
                 });
                 _this.oneSignal.endInit();
@@ -2297,41 +2281,6 @@ webpackContext.id = 435;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DiaryExercisePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var DiaryExercisePage = (function () {
-    function DiaryExercisePage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    DiaryExercisePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-diary-exercise',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\diary-exercise\diary-exercise.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Ionic!</h2>\n  <p>\n    This starter project comes with simple tabs-based layout for apps\n    that are going to primarily use a Tabbed UI.\n  </p>\n  <p>\n    Take a look at the <code>src/pages/</code> directory to add or change tabs,\n    update any existing page or create new pages.\n  </p>\n</ion-content>\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\diary-exercise\diary-exercise.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]])
-    ], DiaryExercisePage);
-    return DiaryExercisePage;
-}());
-
-//# sourceMappingURL=diary-exercise.js.map
-
-/***/ }),
-
-/***/ 446:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Autosize; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2380,7 +2329,7 @@ var Autosize = (function () {
 
 /***/ }),
 
-/***/ 450:
+/***/ 449:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2413,7 +2362,7 @@ var ExerciseSearchPipe = (function () {
 
 /***/ }),
 
-/***/ 451:
+/***/ 450:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2519,7 +2468,6 @@ var DiaryPage = (function () {
         });
         this.user = {};
         this.storage.get("user").then(function (user) {
-            console.log(user);
             if (user) {
                 _this.user = user;
                 _this.userRetreived = true;
@@ -2604,7 +2552,6 @@ var DiaryPage = (function () {
                 if (!workout.exercises) {
                     workout.exercises = [];
                 }
-                console.log(workout);
             })
                 .catch(function () {
                 workout.loading = false;
@@ -2700,6 +2647,9 @@ var DiaryPage = (function () {
         var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_7__modals_notifications_notifications__["a" /* NotificationsModal */]);
         modal.present();
     };
+    DiaryPage.prototype.openLink = function (link) {
+        window.open(link, '_system');
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Slides */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Slides */])
@@ -2710,7 +2660,7 @@ var DiaryPage = (function () {
     ], DiaryPage.prototype, "datepicker", void 0);
     DiaryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-diary',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\diary\diary.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Diary</ion-title>\n    \n        <ion-buttons end>\n            <button ion-button icon-only notifications tappable (click)="openNotifications()">\n                <ion-icon name="notifications" ></ion-icon>\n                <ion-badge color="danger" *ngIf="notificationCount > 0">{{notificationCount}}</ion-badge>\n            </button>\n        </ion-buttons>    \n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n   \n\n    <div class="date-changer">\n        <ion-icon tappable ios="ios-arrow-back" md="ios-arrow-back" (click)="changeDay(-1)"></ion-icon>\n        <span tappable ion-datepicker [markDates]="markedWorkoutDates" (ionChanged)="changeDate($event)">{{getSelectedDate()}}</span>\n        <ion-icon tappable ios="ios-arrow-forward" md="ios-arrow-forward" (click)="changeDay(1)"></ion-icon>\n    </div>    \n    \n    <ion-slides initialSlide="7" (ionSlideDidChange)="workoutChanged()">\n\n        <ion-slide style="background-color:#ececec;" *ngFor="let slide of workoutSlides; let i = index" >\n            \n            <div class="diary-loading" *ngIf="workouts[i].loading">\n                <ion-spinner></ion-spinner>\n            </div>\n   \n            <div class="diary-empty" *ngIf="workouts[i].exercises.length < 1 && !workouts[i].loading">\n                <ion-icon name=\'bookmarks\'></ion-icon>\n                Diary Empty\n            </div>                   \n                   \n            <ion-list class=\'diary-exercise-list\' *ngIf="!workouts[i].loading">\n              <ion-item *ngFor="let exercise of workouts[i].exercises; let i = index" (click)="openEditExerciseModal(exercise, i)">\n                  <h2>{{exercise.exercise.name}}</h2>\n                  <p>\n                    {{getSetString(exercise)}}\n                  </p>                  \n\n                  <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" item-end [ngClass]="{\'has-notes\' : exercise.notes || exercise.video}"></ion-icon>\n              </ion-item>\n \n                \n                \n            </ion-list>            \n            \n            \n        </ion-slide>\n\n    </ion-slides>\n  \n  \n    <ion-fab bottom right>\n        <button ion-fab color="primary" (click)="openAddDiaryModal()">\n            <ion-icon name="add"></ion-icon>\n        </button>\n    </ion-fab>  \n  \n</ion-content>\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\diary\diary.html"*/
+            selector: 'page-diary',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\diary\diary.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Diary</ion-title>\n    \n        <ion-buttons end>\n            <button ion-button icon-only notifications tappable (click)="openNotifications()">\n                <ion-icon name="notifications" ></ion-icon>\n                <ion-badge color="danger" *ngIf="notificationCount > 0">{{notificationCount}}</ion-badge>\n            </button>\n        </ion-buttons>    \n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n   \n\n    <div class="date-changer">\n        <ion-icon tappable ios="ios-arrow-back" md="ios-arrow-back" (click)="changeDay(-1)"></ion-icon>\n        <span tappable ion-datepicker [markDates]="markedWorkoutDates" (ionChanged)="changeDate($event)">{{getSelectedDate()}}</span>\n        <ion-icon tappable ios="ios-arrow-forward" md="ios-arrow-forward" (click)="changeDay(1)"></ion-icon>\n    </div>    \n    \n    <ion-slides initialSlide="7" (ionSlideDidChange)="workoutChanged()">\n\n        <ion-slide style="background-color:#ececec;" *ngFor="let slide of workoutSlides; let i = index" >\n            \n            <div class="diary-loading" *ngIf="workouts[i].loading">\n                <ion-spinner></ion-spinner>\n            </div>\n                   \n            <div class="diary-notes" *ngIf="workouts[i].notes">\n                {{workouts[i].notes}}\n                <span *ngFor="let video of workouts[i].videos" (click)="openLink(video.video)">{{video.name}}</span>\n            </div>\n   \n            <div class="diary-empty" *ngIf="workouts[i].exercises.length < 1 && !workouts[i].loading">\n                <ion-icon name=\'bookmarks\'></ion-icon>\n                Diary Empty\n            </div>                   \n                   \n            <ion-list class=\'diary-exercise-list\' *ngIf="!workouts[i].loading">\n              <ion-item *ngFor="let exercise of workouts[i].exercises; let i = index" (click)="openEditExerciseModal(exercise, i)">\n                  <h2>{{exercise.exercise.name}}</h2>\n                  <p>\n                    {{getSetString(exercise)}}\n                  </p>                  \n\n                  <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" item-end [ngClass]="{\'has-notes\' : exercise.notes || exercise.video}"></ion-icon>\n              </ion-item>\n \n                \n                \n            </ion-list>            \n            \n            \n        </ion-slide>\n\n    </ion-slides>\n  \n  \n    <ion-fab bottom right>\n        <button ion-fab color="primary" (click)="openAddDiaryModal()">\n            <ion-icon name="add"></ion-icon>\n        </button>\n    </ion-fab>  \n  \n</ion-content>\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\pages\diary\diary.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_8__providers_diary_diary__["a" /* DiaryProvider */], __WEBPACK_IMPORTED_MODULE_9__providers_notification_notification__["a" /* NotificationProvider */]])
     ], DiaryPage);
@@ -2765,7 +2715,6 @@ var NotificationProvider = (function () {
             _this.storage.get("token").then(function (token) {
                 if (token) {
                     _this.http.get(__WEBPACK_IMPORTED_MODULE_2__app_app_settings__["a" /* AppSettings */].apiUrl + "/notifications?token=" + token + "&page=" + pagination.page + "&limit=" + pagination.limit).subscribe(function (res) {
-                        console.log(res);
                         resolve(res);
                     }, function (e) {
                         reject(e);
@@ -2783,7 +2732,6 @@ var NotificationProvider = (function () {
             _this.storage.get("token").then(function (token) {
                 if (token) {
                     _this.http.get(__WEBPACK_IMPORTED_MODULE_2__app_app_settings__["a" /* AppSettings */].apiUrl + "/notificationcount?token=" + token).subscribe(function (res) {
-                        console.log(res);
                         resolve(res);
                     }, function (e) {
                         reject(e);
@@ -2858,7 +2806,6 @@ var MessagePage = (function () {
         this.events = events;
         this.properties = { loading: true };
         this.conversation = { id: this.params.data.conversation.id, participants: this.params.data.conversation.participants ? this.params.data.conversation.participants : [] };
-        console.log(this.params);
         this.getConversation(this.params.data.conversation.id);
         this.user = {};
         this.storage.get("user").then(function (user) {
@@ -2886,7 +2833,6 @@ var MessagePage = (function () {
             _this.conversation = data;
             _this.calculateMessages();
             setTimeout(function () { _this.content.scrollToBottom(); }, 200);
-            console.log(data);
         }).catch(function () {
             _this.properties.loading = false;
         });
@@ -2909,7 +2855,7 @@ var MessagePage = (function () {
         return __WEBPACK_IMPORTED_MODULE_4_moment__(date).fromNow();
     };
     MessagePage.prototype.getAvatar = function (userId) {
-        var avatar = 'http://websites.localhost/strengthsheet/api/uploads/profile.jpg';
+        var avatar = 'https://api.strengthsheet.com/uploads/profile.jpg';
         for (var _i = 0, _a = this.conversation.participants; _i < _a.length; _i++) {
             var participant = _a[_i];
             if (participant.user_id === userId && participant.profile.avatar) {
@@ -2917,7 +2863,6 @@ var MessagePage = (function () {
                 break;
             }
         }
-        console.log(avatar);
         return avatar;
     };
     MessagePage.prototype.calculateMessages = function () {
@@ -3099,7 +3044,7 @@ var RequestsModal = (function () {
     };
     RequestsModal = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'requests',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\requests\requests.html"*/'<ion-header>\n    <ion-toolbar color="primary">\n        <ion-title>\n            Coach Requests\n        </ion-title>\n        <ion-buttons start>\n\n\n            \n            <button ion-button (click)="dismiss()">\n                <span ion-text showWhen="ios">Cancel</span>\n                <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n            </button>\n        </ion-buttons>\n  \n    </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content>\n    \n    \n    <div class="diary-loading" *ngIf="properties.loading">\n        <ion-spinner></ion-spinner>\n    </div>\n    \n    <div class="diary-empty empty-state" *ngIf="!properties.loading && requests.length < 1">\n        <ion-icon name=\'person-add\'></ion-icon>\n        No Pending Requests\n    </div>    \n    \n    \n    <ion-list class="friends-list">           \n        <ion-item *ngFor="let request of requests; let i = index" (click)="viewProfile(request.profile)">\n            <ion-avatar item-start>\n                <img [src]="request.profile.avatar ? request.profile.avatar : \'http://websites.localhost/strengthsheet/api/uploads/profile.jpg\'">\n            </ion-avatar>\n            <h2>{{request.profile.name}}</h2>\n            <p></p>\n            <button ion-button clear item-end (click)="declineRequest(request,i, $event)" color="danger">Decline</button>\n            <button ion-button clear item-end (click)="acceptRequest(request,i, $event)">Accept</button>\n\n        </ion-item>  \n    </ion-list>\n        \n        \n</ion-content>\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\requests\requests.html"*/
+            selector: 'requests',template:/*ion-inline-start:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\requests\requests.html"*/'<ion-header>\n    <ion-toolbar color="primary">\n        <ion-title>\n            Coach Requests\n        </ion-title>\n        <ion-buttons start>\n\n\n            \n            <button ion-button (click)="dismiss()">\n                <span ion-text showWhen="ios">Cancel</span>\n                <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n            </button>\n        </ion-buttons>\n  \n    </ion-toolbar>\n</ion-header>\n\n\n\n<ion-content>\n    \n    \n    <div class="diary-loading" *ngIf="properties.loading">\n        <ion-spinner></ion-spinner>\n    </div>\n    \n    <div class="diary-empty empty-state" *ngIf="!properties.loading && requests.length < 1">\n        <ion-icon name=\'person-add\'></ion-icon>\n        No Pending Requests\n    </div>    \n    \n    \n    <ion-list class="friends-list">           \n        <ion-item *ngFor="let request of requests; let i = index" (click)="viewProfile(request.profile)">\n            <ion-avatar item-start>\n                <img [src]="request.profile.avatar ? request.profile.avatar : \'https://api.strengthsheet.com/uploads/profile.jpg\'">\n            </ion-avatar>\n            <h2>{{request.profile.name}}</h2>\n            <p></p>\n            <button ion-button clear item-end (click)="declineRequest(request,i, $event)" color="danger">Decline</button>\n            <button ion-button clear item-end (click)="acceptRequest(request,i, $event)">Accept</button>\n\n        </ion-item>  \n    </ion-list>\n        \n        \n</ion-content>\n'/*ion-inline-end:"D:\Taylor\Documents\Websites\strengthsheet\mobile\src\modals\requests\requests.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_transfer__["a" /* FileTransfer */], __WEBPACK_IMPORTED_MODULE_6__providers_request_request__["a" /* RequestProvider */]])
     ], RequestsModal);
@@ -3171,7 +3116,6 @@ var RequestProvider = (function () {
             _this.storage.get("token").then(function (token) {
                 if (token) {
                     _this.http.get(__WEBPACK_IMPORTED_MODULE_2__app_app_settings__["a" /* AppSettings */].apiUrl + "/requests?token=" + token).subscribe(function (res) {
-                        console.log(res.clients);
                         resolve(res.clients);
                     }, function (e) {
                         reject(e);

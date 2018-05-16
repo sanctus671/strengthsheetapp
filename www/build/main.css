@@ -25870,6 +25870,20 @@ ion-slides {
   font-size: 80px;
 }
 
+.diary-notes {
+  background-color: white;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 1px;
+  padding: 15px 15px;
+  font-size: 12px;
+  color: #2e7d32;
+}
+
+.diary-notes span {
+  display: block;
+  font-weight: bold;
+}
+
 .modal-wrapper ionic2-datepicker .datepicker-wrapper .datepicker-header .weekday-header {
   background-color: #2E7D32;
 }
