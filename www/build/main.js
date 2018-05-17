@@ -2487,6 +2487,13 @@ var DiaryPage = (function () {
                 _this.notificationCount = parseInt(data);
             });
         });
+        this.events.subscribe("user:retreived", function (user) {
+            if (!_this.userRetreived) {
+                _this.user = user;
+                _this.userRetreived = true;
+                _this.refreshWorkouts();
+            }
+        });
     }
     DiaryPage.prototype.setupSlides = function () {
         var _this = this;
