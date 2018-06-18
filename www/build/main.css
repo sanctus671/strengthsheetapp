@@ -25719,6 +25719,16 @@ ion-navbar.toolbar {
   margin-bottom: -10px;
 }
 
+.item-button ion-spinner {
+  width: 14px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.item-block.not-seen {
+  background-color: #e6eee6;
+}
+
 .profile-nav.header::after {
   background-image: none;
 }
